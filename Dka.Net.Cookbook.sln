@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookbook", "Cookbook\Cookbook.csproj", "{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cookbook", "Cookbook", "{52F6D236-ED0A-4F34-82DC-65F38014B6BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{26AEDB18-4024-4D7A-83C8-45E94455E973}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth", "OAuth", "{B9FFA0B4-ADB7-484E-91E0-2B9FB9C754ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityWithDapper", "IdentityWithDapper", "{9F8EDC65-F171-4F79-8C5B-3B01CFEDB7D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{5357B10C-EA26-432C-80BE-8F48C6EBB891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{5953C534-82EB-4B2A-887A-283E78056654}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctions", "AzureFunctions", "{104699ED-873F-4E3F-AC69-E4627FC314D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIM", "APIM", "{7B3C6C87-37AA-46AB-B75A-CF7407CFCE89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CD2E5DE-D0DF-4D85-B697-171C8EA76BA8} = {52F6D236-ED0A-4F34-82DC-65F38014B6BA}
+	EndGlobalSection
+EndGlobal
