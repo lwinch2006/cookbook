@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ServiceBusSubscriber;
+
+public interface IServiceBusSubscriber
+{
+    Task<T?> ReceiveMessage<T>(
+        string queueOrTopicName, 
+        string? subscriptionName = default, 
+        ServiceBusSubscriberReceiveOptions? options = default, 
+        CancellationToken cancellationToken = default)
+        where T : class;
+
+    Task<object?> ReceiveMessage(
+        string queueOrTopicName, 
+        string? subscriptionName = default, 
+        ServiceBusSubscriberReceiveOptions? options = default, 
+        CancellationToken cancellationToken = default);
+
+    IAsyncEnumerable<T> ReceiveMessages<T>(
+        string queueOrTopicName, 
+        string? subscriptionName = default, 
+        ServiceBusSubscriberReceiveOptions? options = default, 
+        CancellationToken cancellationToken = default)
+        where T : class;
+        
+    IAsyncEnumerable<object> ReceiveMessages(
+        string queueOrTopicName, 
+        string? subscriptionName = default, 
+        ServiceBusSubscriberReceiveOptions? options = default, 
+        CancellationToken cancellationToken = default);
+
+    Task StartReceiveMessages(
+        string queueOrTopicName,
+        string? subscriptionName = default,
+        Func<ServiceBusProcessMessageEventArgs, Task>? processMessageFunc = default,
+        Func<ServiceBusProcessErrorEventArgs, Task>? processErrorFunc = default,
+        ServiceBusSubscriberReceiveOptions? options = default,
+        CancellationToken cancellationToken = default);
+
+    Task StopReceiveMessages(CancellationToken cancellationToken = default);
+        
+    Task EnsureTopicSubscription(
+        string topicName, 
+        string subscriptionName, 
+        CancellationToken cancellationToken = default,
+        string sqlFilterRule = "1=1");
+        
+    Task<long> GetMessageCount(string queueOrTopicName, string? subscriptionName = default, bool inDeadLetterQueue = default);
+}
